@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تیم مدیریت | Donutt SMP</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090909;
+    background-image:
+        radial-gradient(
+            rgba(255,123,0,.08),
+            transparent 40%
+        );
+
+    color:white;
+
+    font-family:tahoma;
+
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:20px auto;
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(25,25,25,.9),
+            rgba(10,10,10,.9)
+        );
+
+    border:1px solid
+        rgba(255,123,0,.15);
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 20px
+        rgba(255,123,0,.1);
+}
+
+.logo{
+
+    color:#ff7b00;
+
+    font-size:30px;
+
+    font-weight:900;
+
+    text-shadow:
+        0 0 15px
+        rgba(255,123,0,.4);
+}
+
+.nav{
+
+    display:flex;
+
+    gap:15px;
+}
+
+.nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid
+        rgba(255,123,0,.1);
+
+    transition:.3s;
+}
+
+.nav a:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9d00,
+            #ff5e00
+        );
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(255,123,0,.3);
+}
+
+/* HEADER */
+
+.header{
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.header h1{
+
+    font-size:60px;
+
+    color:#ff7b00;
+
+    text-shadow:
+        0 0 15px
+        rgba(255,123,0,.4);
+
+    margin-bottom:20px;
+}
+
+.header p{
+
+    color:#999;
+
+    font-size:20px;
+}
+
+/* STAFF */
+
+.staff{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px,1fr)
+        );
+
+    gap:30px;
+
+    padding-bottom:100px;
+}
+
+/* CARD */
+
+.card{
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818,
+            #111
+        );
+
+    border:1px solid #222;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.4);
+}
+
+.card:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color:#ff7b00;
+
+    box-shadow:
+        0 20px 40px
+        rgba(255,123,0,.2);
+}
+
+/* AVATAR */
+
+.avatar{
+
+    width:130px;
+    height:130px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9d00,
+            #ff5e00
+        );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+        0 0 30px
+        rgba(255,123,0,.35);
+}
+
+.name{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+.rank{
+
+    color:#ff7b00;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+.desc{
+
+    color:#aaa;
+
+    line-height:30px;
+}
+
+.online{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:8px 18px;
+
+    background:#00aa55;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 20px
+        rgba(0,255,120,.3);
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#111;
+
+    border-top:1px solid #222;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        width:95%;
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+    }
+
+    .logo{
+
+        font-size:24px;
+    }
+
+    .nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .nav a{
+
+        font-size:14px;
+
+        padding:10px 14px;
+    }
+
+    .header h1{
+
+        font-size:40px;
+    }
+
+    .header p{
+
+        font-size:16px;
+    }
+
+    .staff{
+
+        width:95%;
+
+        grid-template-columns:1fr;
+    }
+
+    .card{
+
+        padding:25px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🍩 DONUTT SMP
+    </div>
+
+    <div class="nav">
+
+        <a href="index.html">
+            🏠 خانه
+        </a>
+
+        <a href="store.html">
+            💰 فروشگاه
+        </a>
+
+        <a href="contact.html">
+            💬 ارتباط با ما
+        </a>
+
+    </div>
+
+</header>
+
+<section class="header">
+
+    <h1>
+        👑 تیم مدیریت
+    </h1>
+
+    <p>
+        اعضای تیم Donutt SMP
+    </p>
+
+</section>
+
+<section class="staff">
+
+    <div class="card">
+
+        <div class="avatar">
+            👑
+        </div>
+
+        <div class="name">
+            Ghadir
+        </div>
+
+        <div class="rank">
+            OWNER
+        </div>
+
+        <div class="desc">
+            بنیان‌گذار و مدیر اصلی سرور
+        </div>
+
+        <div class="online">
+            Online
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="avatar">
+            💻
+        </div>
+
+        <div class="name">
+            Hamyar
+        </div>
+
+        <div class="rank">
+            DEVELOPER
+        </div>
+
+        <div class="desc">
+            توسعه و نگهداری سیستم‌های سرور
+        </div>
+
+        <div class="online">
+            Online
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="avatar">
+            🛡️
+        </div>
+
+        <div class="name">
+            Arman
+        </div>
+
+        <div class="rank">
+            ADMINISTRATOR
+        </div>
+
+        <div class="desc">
+            مدیریت و نظارت بر بازیکنان
+        </div>
+
+        <div class="online">
+            Online
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="avatar">
+            ⚔️
+        </div>
+
+        <div class="name">
+            Mmd
+        </div>
+
+        <div class="rank">
+            MODERATOR
+        </div>
+
+        <div class="desc">
+            رسیدگی به گزارش‌ها و رویدادها
+        </div>
+
+        <div class="online">
+            Online
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    © 2025 Donutt SMP
+
+</footer>
+
+</body>
+</html>
