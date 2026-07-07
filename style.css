@@ -1,4 +1,6 @@
-/* RESET */
+/*======================================
+        RESET
+======================================*/
 
 *{
     margin:0;
@@ -11,7 +13,9 @@ html{
 }
 
 body{
+
     background:#090909;
+
     background-image:
         radial-gradient(
             rgba(255,123,0,.08),
@@ -23,29 +27,77 @@ body{
     font-family:tahoma;
 
     overflow-x:hidden;
+
 }
 
-/* SCROLLBAR */
+/*======================================
+        LINKS
+======================================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/*======================================
+        BUTTON
+======================================*/
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+}
+
+/*======================================
+        IMAGES
+======================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*======================================
+        SCROLLBAR
+======================================*/
 
 ::-webkit-scrollbar{
+
     width:10px;
+
 }
 
 ::-webkit-scrollbar-track{
+
     background:#111;
+
 }
 
 ::-webkit-scrollbar-thumb{
-    background:
-        linear-gradient(
-            #ff9d00,
-            #ff5e00
-        );
+
+    background:#ff7b00;
 
     border-radius:20px;
+
 }
 
-/* NAVBAR */
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff9d00;
+
+}
+/*======================================
+            NAVBAR
+======================================*/
 
 .navbar{
 
@@ -53,93 +105,93 @@ body{
 
     top:20px;
 
-    left:5%;
-    right:5%;
+    left:50%;
 
-    width:auto;
+    transform:translateX(-50%);
+
+    width:90%;
+
+    max-width:1400px;
+
+    height:80px;
+
+    padding:0 30px;
 
     display:flex;
-    justify-content:space-between;
-    align-items:center;
 
-    padding:18px 30px;
+    justify-content:space-between;
+
+    align-items:center;
 
     background:
         linear-gradient(
             135deg,
-            rgba(25,25,25,.9),
-            rgba(10,10,10,.9)
+            rgba(25,25,25,.88),
+            rgba(10,10,10,.88)
         );
+
+    backdrop-filter:blur(20px);
 
     border:1px solid
         rgba(255,123,0,.15);
 
     border-radius:20px;
 
+    box-shadow:
+        0 0 25px
+        rgba(255,123,0,.10);
+
     z-index:9999;
 
-    transform:none;
 }
 
-/* LOGO */
+/*======================================
+            LOGO
+======================================*/
 
 .logo{
 
     display:flex;
 
     align-items:center;
+
+    gap:10px;
+
+    color:#ff7b00;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    white-space:nowrap;
+
+    text-shadow:
+        0 0 12px
+        rgba(255,123,0,.35);
+
 }
 
-.logo img{
+/*======================================
+        DESKTOP MENU
+======================================*/
 
-    height:65px;
-
-    width:auto;
-
-    transition:.3s;
-
-    animation:
-        float 4s ease infinite;
-
-    filter:
-        drop-shadow(
-            0 0 15px
-            rgba(255,123,0,.5)
-        );
-}
-
-.logo img:hover{
-
-    transform:
-        scale(1.08);
-
-    filter:
-        drop-shadow(
-            0 0 25px
-            rgba(255,123,0,.9)
-        );
-}
-
-/* MENU */
-
-nav{
+.desktop-menu{
 
     display:flex;
 
-    gap:15px;
-
     align-items:center;
+
+    gap:14px;
+
 }
 
-nav a{
+.desktop-menu a{
+
+    padding:12px 18px;
+
+    border-radius:12px;
 
     color:#fff;
-
-    text-decoration:none;
-
-    padding:12px 22px;
-
-    border-radius:14px;
 
     font-size:15px;
 
@@ -152,18 +204,43 @@ nav a{
         1px solid
         rgba(255,123,0,.12);
 
-    backdrop-filter:
-        blur(10px);
+    transition:.30s;
 
-    text-shadow:
-        0 0 10px
-        rgba(255,255,255,.2);
-
-    transition:
-        all .3s ease;
 }
 
-nav a:hover{
+.desktop-menu a:hover{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9d00,
+            #ff5e00
+        );
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(255,123,0,.30);
+
+}
+
+/*======================================
+        HAMBURGER BUTTON
+======================================*/
+
+.menu-btn{
+
+    display:none;
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:12px;
 
     background:
         linear-gradient(
@@ -174,182 +251,213 @@ nav a:hover{
 
     color:white;
 
-    transform:
-        translateY(-4px);
+    font-size:22px;
 
-    box-shadow:
-        0 10px 30px
-        rgba(255,123,0,.4);
+    transition:.3s;
 
-    text-shadow:
-        0 0 15px white;
 }
 
-/* HERO */
+.menu-btn:hover{
 
-.hero{
+    transform:scale(1.08);
+
+}
+/*======================================
+        SIDEBAR
+======================================*/
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    right:-300px;
+
+    width:280px;
 
     height:100vh;
 
     background:
-        radial-gradient(
-            circle at top right,
-            rgba(255,123,0,.2),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at bottom left,
-            rgba(255,123,0,.1),
-            transparent 40%
-        ),
         linear-gradient(
             180deg,
-            #111,
-            #090909
+            #161616,
+            #0d0d0d
         );
+
+    border-left:1px solid
+        rgba(255,123,0,.2);
+
+    box-shadow:
+        -10px 0 30px
+        rgba(0,0,0,.5);
+
+    transition:.35s;
+
+    z-index:10001;
 
     display:flex;
 
+    flex-direction:column;
+
+}
+
+.sidebar.active{
+
+    right:0;
+
+}
+
+/*======================================
+      SIDEBAR HEADER
+======================================*/
+
+.sidebar-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
     align-items:center;
 
-    padding:0 10%;
+    padding:25px;
 
-    position:relative;
+    border-bottom:1px solid #222;
 
-    overflow:hidden;
 }
 
-.hero::before{
+/*======================================
+       CLOSE BUTTON
+======================================*/
 
-    content:"";
+.close-menu{
 
-    position:absolute;
+    width:42px;
 
-    width:500px;
-    height:500px;
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff5e00;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.close-menu:hover{
+
+    transform:rotate(90deg);
+
+}
+
+/*======================================
+        SIDEBAR NAV
+======================================*/
+
+.sidebar-nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:20px;
+
+    gap:15px;
+
+}
+
+.sidebar-nav a{
+
+    color:#fff;
+
+    padding:15px 18px;
+
+    border-radius:14px;
 
     background:
-        radial-gradient(
-            rgba(255,123,0,.15),
-            transparent
-        );
+        rgba(255,255,255,.03);
 
-    top:-200px;
-    right:-150px;
+    border:1px solid
+        rgba(255,123,0,.1);
 
-    filter:blur(50px);
+    transition:.3s;
+
+    font-size:16px;
+
+    font-weight:bold;
+
 }
 
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:400px;
-    height:400px;
+.sidebar-nav a:hover{
 
     background:
-        radial-gradient(
-            rgba(255,123,0,.1),
-            transparent
+        linear-gradient(
+            135deg,
+            #ff9d00,
+            #ff5e00
         );
 
-    bottom:-150px;
-    left:-100px;
+    transform:translateX(-5px);
 
-    filter:blur(60px);
 }
 
-.hero-content{
+/*======================================
+          OVERLAY
+======================================*/
 
-    animation:fade 1s;
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        rgba(0,0,0,.65);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:10000;
+
 }
 
-.hero h1{
+.overlay.active{
 
-    font-size:90px;
+    opacity:1;
 
-    color:#ff7b00;
+    visibility:visible;
 
-    text-shadow:
-        0 0 6px rgba(255,123,0,.6),
-        0 0 15px rgba(255,123,0,.25);
 }
+/*======================================
+        COMMON BUTTONS
+======================================*/
 
-.hero p{
-
-    margin:20px 0;
-
-    color:#ccc;
-
-    font-size:25px;
-}
-
-/* ONLINE */
-
-.online{
+.btn{
 
     display:inline-flex;
+
+    justify-content:center;
 
     align-items:center;
 
     gap:10px;
 
-    background:#151515;
+    padding:15px 28px;
 
-    padding:15px 20px;
-
-    border-radius:12px;
-
-    border:1px solid #222;
-}
-
-.dot{
-
-    width:12px;
-
-    height:12px;
-
-    background:#00ff88;
-
-    border-radius:50%;
-
-    box-shadow:
-        0 0 20px #00ff88;
-}
-
-/* IP */
-
-.ip-box{
-
-    display:flex;
-
-    gap:15px;
-
-    margin:25px 0;
-}
-
-.ip{
-
-    background:#151515;
-
-    padding:18px 25px;
+    border:none;
 
     border-radius:15px;
-
-    border:1px solid #222;
-
-    box-shadow:
-        inset 0 0 20px
-        rgba(255,255,255,.02);
-}
-
-/* BUTTONS */
-
-.copy,
-.join,
-.buy{
 
     background:
         linear-gradient(
@@ -358,264 +466,132 @@ nav a:hover{
             #ff5e00
         );
 
-    color:white;
+    color:#fff;
 
-    border:none;
+    font-size:17px;
 
-    padding:18px 25px;
-
-    border-radius:15px;
+    font-weight:bold;
 
     cursor:pointer;
 
-    font-weight:700;
-
     transition:.3s;
+
 }
 
-.join{
-
-    width:220px;
-
-    font-size:18px;
-}
-
-.copy:hover,
-.join:hover,
-.buy:hover{
+.btn:hover{
 
     transform:
         translateY(-5px);
 
     box-shadow:
         0 15px 30px
-        rgba(255,123,0,.4);
+        rgba(255,123,0,.35);
+
 }
 
-/* STATS */
+.btn:active{
 
-.stats{
+    transform:scale(.96);
 
-    display:flex;
-
-    justify-content:center;
-
-    gap:100px;
-
-    background:#111;
-
-    padding:80px;
 }
 
-.stat{
+/*======================================
+        COMMON CONTAINER
+======================================*/
 
-    text-align:center;
+.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
 }
 
-.stat h2{
+/*======================================
+        COMMON SECTION
+======================================*/
 
-    color:#ff7b00;
+.section{
 
-    font-size:50px;
+    padding:90px 0;
 
-    text-shadow:
-        0 0 20px
-        rgba(255,123,0,.4);
 }
 
-/* TITLES */
+/*======================================
+        COMMON TITLE
+======================================*/
 
 .title{
 
     text-align:center;
 
-    margin:100px 0 50px;
-
-    font-size:45px;
-
-    color:#ff7b00;
-}
-
-/* GAMEMODES */
-
-.gamemodes{
-
-    padding:0 8% 100px;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(300px,1fr)
-        );
-
-    gap:30px;
-}
-
-/* CARDS */
-
-.card,
-.rank,
-.staff-card{
-
-    background:
-        linear-gradient(
-            180deg,
-            #181818,
-            #111
-        );
-
-    border:1px solid #222;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    transition:.3s;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,.4);
-}
-
-.card:hover,
-.rank:hover,
-.staff-card:hover{
-
-    transform:
-        translateY(-10px)
-        scale(1.02);
-
-    border-color:#ff7b00;
-
-    box-shadow:
-        0 0 25px
-        rgba(255,123,0,.2),
-
-        0 20px 40px
-        rgba(255,123,0,.15);
-}
-
-/* STAFF */
-
-.staff{
-
-    padding:100px 8%;
-}
-
-.staff-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(250px,1fr)
-        );
-
-    gap:30px;
-}
-
-.staff-card{
-
-    text-align:center;
-}
-
-.staff-card img{
-
-    width:120px;
-
-    height:120px;
-
-    border-radius:20px;
-
-    object-fit:cover;
-
-    margin-bottom:20px;
-}
-
-/* STORE */
-
-.store{
-
-    padding:100px 8%;
-}
-
-/* RULES */
-
-.rules{
-
-    padding:100px 8%;
-}
-
-.rules h1{
-
-    text-align:center;
+    font-size:48px;
 
     color:#ff7b00;
 
-    margin-bottom:50px;
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 12px
+        rgba(255,123,0,.35);
+
 }
 
-.rule{
+.subtitle{
 
-    background:#151515;
+    text-align:center;
 
-    border:1px solid #222;
+    color:#aaa;
 
-    padding:25px;
+    font-size:18px;
 
-    border-radius:15px;
+    margin-bottom:60px;
 
-    margin-bottom:20px;
-
-    transition:.3s;
 }
 
-.rule:hover{
-
-    border-color:#ff7b00;
-
-    transform:
-        translateX(-10px);
-
-    box-shadow:
-        0 10px 30px
-        rgba(255,123,0,.15);
-}
-
-/* FOOTER */
+/*======================================
+        FOOTER
+======================================*/
 
 footer{
 
-    background:
-        linear-gradient(
-            180deg,
-            #111,
-            #090909
-        );
+    margin-top:80px;
 
-    border-top:
-        1px solid #222;
-
-    padding:50px;
+    padding:35px 20px;
 
     text-align:center;
 
-    color:#777;
+    background:#111;
+
+    border-top:1px solid #222;
+
+    color:#888;
+
+    font-size:15px;
+
+}
+/*======================================
+        ANIMATIONS
+======================================*/
+
+.fade-up{
+
+    animation:
+        fadeUp .8s ease;
+
 }
 
-/* ANIMATIONS */
-
-@keyframes fade{
+@keyframes fadeUp{
 
     from{
 
         opacity:0;
 
         transform:
-            translateY(50px);
+            translateY(30px);
+
     }
 
     to{
@@ -624,216 +600,129 @@ footer{
 
         transform:
             translateY(0);
+
     }
+
 }
 
-@keyframes float{
+/*======================================
+        MOBILE
+======================================*/
 
-    0%{
-        transform:
-            translateY(0);
-    }
+@media(max-width:768px){
 
-    50%{
-        transform:
-            translateY(-8px);
-    }
-
-    100%{
-        transform:
-            translateY(0);
-    }
-}
-
-/* MOBILE */
-
-/* MOBILE */
-
-@media (max-width:768px){
+    /* Navbar */
 
     .navbar{
+
         width:95%;
-        top:10px;
 
-        flex-direction:column;
-        gap:15px;
+        height:70px;
 
-        padding:15px;
+        padding:0 18px;
+
+        top:12px;
+
     }
 
     .logo{
-        justify-content:center;
 
         font-size:22px;
 
-        text-align:center;
     }
 
-    nav{
-        width:100%;
+    /* Desktop Menu */
+
+    .desktop-menu{
+
+        display:none;
+
+    }
+
+    /* Hamburger */
+
+    .menu-btn{
 
         display:flex;
 
-        flex-wrap:wrap;
-
         justify-content:center;
-
-        gap:8px;
-    }
-
-    nav a{
-        padding:10px 14px;
-
-        font-size:14px;
-    }
-
-    .hero{
-        min-height:100vh;
-
-        justify-content:center;
-
-        text-align:center;
-
-        padding:
-            180px
-            20px
-            60px;
-    }
-
-    .hero-content{
-        width:100%;
-
-        max-width:400px;
-
-        margin:auto;
-    }
-
-    .hero h1{
-        font-size:42px;
-
-        line-height:1.1;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .online{
-        width:100%;
-
-        justify-content:center;
-    }
-
-    .ip-box{
-        flex-direction:column;
 
         align-items:center;
 
-        width:100%;
     }
 
-    .ip{
-        width:100%;
+    /* Sidebar */
 
-        max-width:320px;
+    .sidebar{
 
-        text-align:center;
+        width:260px;
 
-        word-break:break-all;
     }
 
-    .copy,
-    .join{
-        width:100%;
+    /* Common */
 
-        max-width:320px;
+    .container{
+
+        width:95%;
+
     }
 
-    .stats{
-        flex-direction:column;
+    .section{
 
-        gap:30px;
+        padding:70px 0;
 
-        padding:50px 20px;
-    }
-
-    .stat h2{
-        font-size:40px;
     }
 
     .title{
-        font-size:32px;
 
-        margin:70px 0 30px;
+        font-size:34px;
+
     }
 
-    .gamemodes{
-        grid-template-columns:1fr;
+    .subtitle{
 
-        padding:0 20px 60px;
+        font-size:15px;
+
     }
 
-    .card,
-    .rank,
-    .staff-card{
-        padding:25px;
-    }
+    .btn{
 
-    .staff-grid{
-        grid-template-columns:1fr;
-    }
+        width:100%;
 
-    .rules{
-        padding:60px 20px;
     }
 
     footer{
-        padding:30px 15px;
-    }
-}@media(max-width:768px){
 
-    .navbar{
+        padding:25px 15px;
 
-        flex-direction:column;
+        font-size:14px;
 
-        gap:20px;
     }
 
-    nav{
+}
 
-        flex-wrap:wrap;
+/*======================================
+        DESKTOP
+======================================*/
 
-        justify-content:center;
+@media(min-width:769px){
+
+    .menu-btn{
+
+        display:none;
+
     }
 
-    .hero{
+    .sidebar{
 
-        justify-content:center;
+        display:none;
 
-        text-align:center;
-
-        background-attachment:scroll;
     }
 
-    .hero h1{
+    .overlay{
 
-        font-size:50px;
+        display:none;
+
     }
 
-    .ip-box{
-
-        flex-direction:column;
-    }
-
-    .stats{
-
-        flex-direction:column;
-
-        gap:40px;
-    }
-
-    .logo img{
-
-        height:50px;
-    }
 }

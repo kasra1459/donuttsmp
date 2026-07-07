@@ -3,408 +3,50 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>فروشگاه | Donutt SMP</title>
+    <title>فروشگاه | Donutt SMP</title>
 
-<style>
+        <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./store.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#090909;
-    background-image:
-        radial-gradient(
-            rgba(255,123,0,.08),
-            transparent 40%
-        );
-
-    color:white;
-
-    font-family:tahoma;
-
-    overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-.navbar{
-
-    width:90%;
-
-    max-width:1400px;
-
-    margin:20px auto;
-
-    padding:20px 30px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(25,25,25,.85),
-            rgba(10,10,10,.85)
-        );
-
-    backdrop-filter:blur(20px);
-
-    border:1px solid
-        rgba(255,123,0,.15);
-
-    border-radius:20px;
-
-    box-shadow:
-        0 0 20px
-        rgba(255,123,0,.1);
-}
-
-.logo{
-
-    color:#ff7b00;
-
-    font-size:30px;
-
-    font-weight:900;
-
-    text-shadow:
-        0 0 10px
-        rgba(255,123,0,.4);
-}
-
-.nav{
-
-    display:flex;
-
-    gap:15px;
-}
-
-.nav a{
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:12px 18px;
-
-    border-radius:12px;
-
-    background:
-        rgba(255,255,255,.03);
-
-    border:
-        1px solid
-        rgba(255,123,0,.1);
-
-    transition:.3s;
-}
-
-.nav a:hover{
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff9d00,
-            #ff5e00
-        );
-
-    transform:
-        translateY(-3px);
-}
-
-/* HEADER */
-
-.header{
-
-    text-align:center;
-
-    padding:70px 20px;
-}
-
-.header h1{
-
-    font-size:60px;
-
-    color:#ff7b00;
-
-    text-shadow:
-        0 0 15px
-        rgba(255,123,0,.4);
-
-    margin-bottom:20px;
-}
-
-.header p{
-
-    color:#aaa;
-
-    font-size:20px;
-}
-
-/* STORE */
-
-.store{
-
-    width:90%;
-
-    max-width:1400px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(300px,1fr)
-        );
-
-    gap:30px;
-
-    padding-bottom:100px;
-}
-
-/* CARD */
-
-.rank{
-
-    background:
-        linear-gradient(
-            180deg,
-            #181818,
-            #111
-        );
-
-    border:1px solid #222;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    transition:.3s;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,.4);
-}
-
-.rank:hover{
-
-    transform:
-        translateY(-10px);
-
-    border-color:#ff7b00;
-
-    box-shadow:
-        0 20px 40px
-        rgba(255,123,0,.2);
-}
-
-.rank h2{
-
-    font-size:35px;
-
-    margin-bottom:20px;
-}
-
-.price{
-
-    color:#ff7b00;
-
-    font-size:30px;
-
-    font-weight:bold;
-
-    margin-bottom:25px;
-}
-
-.rank ul{
-
-    list-style:none;
-
-    margin-bottom:30px;
-}
-
-.rank li{
-
-    padding:12px 0;
-
-    color:#bbb;
-}
-
-/* BUTTON */
-
-.buy{
-
-    width:100%;
-
-    padding:18px;
-
-    border:none;
-
-    border-radius:15px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff9d00,
-            #ff5e00
-        );
-
-    color:white;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.buy:hover{
-
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        0 15px 30px
-        rgba(255,123,0,.4);
-}
-
-/* BEST */
-
-.best{
-
-    border:2px solid #ff7b00;
-}
-
-.badge{
-
-    background:#ff7b00;
-
-    color:white;
-
-    padding:8px 18px;
-
-    border-radius:20px;
-
-    display:inline-block;
-
-    margin-bottom:20px;
-}
-
-/* FOOTER */
-
-footer{
-
-    background:#111;
-
-    border-top:1px solid #222;
-
-    padding:40px;
-
-    text-align:center;
-
-    color:#777;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .navbar{
-
-        flex-direction:column;
-
-        gap:15px;
-
-        width:95%;
-
-        padding:20px;
-    }
-
-    .logo{
-
-        font-size:24px;
-    }
-
-    .nav{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    .nav a{
-
-        font-size:14px;
-
-        padding:10px 14px;
-    }
-
-    .header h1{
-
-        font-size:38px;
-    }
-
-    .header p{
-
-        font-size:16px;
-    }
-
-    .store{
-
-        width:95%;
-
-        grid-template-columns:1fr;
-    }
-
-    .rank{
-
-        padding:30px 20px;
-    }
-
-    .rank h2{
-
-        font-size:28px;
-    }
-
-    .price{
-
-        font-size:24px;
-    }
-}
-
-</style>
+<link rel="icon" type="image/png" href="./image/logo.png">
 
 </head>
 
 <body>
 
-<header class="navbar">
+<!-- Overlay -->
 
-    <div class="logo">
-        🍩 DONUTT SMP
+<div class="overlay"></div>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+
+        <div class="logo">
+            🍩 DONUTT SMP
+        </div>
+
+        <button class="close-menu">
+            ✕
+        </button>
+
     </div>
 
-    <div class="nav">
+    <nav class="sidebar-nav">
 
         <a href="index.html">
             🏠 خانه
+        </a>
+
+        <a href="store.html">
+            💰 فروشگاه
         </a>
 
         <a href="staff.html">
@@ -415,14 +57,50 @@ footer{
             💬 ارتباط با ما
         </a>
 
+    </nav>
+
+</aside>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🍩 DONUTT SMP
     </div>
 
+    <nav class="desktop-menu">
+
+        <a href="index.html">
+            🏠 خانه
+        </a>
+
+        <a href="store.html">
+            💰 فروشگاه
+        </a>
+
+        <a href="staff.html">
+            👑 تیم مدیریت
+        </a>
+
+        <a href="contact.html">
+            💬 ارتباط با ما
+        </a>
+
+    </nav>
+
+    <button class="menu-btn">
+        ☰
+    </button>
+
 </header>
+
+<!-- HEADER -->
 
 <section class="header">
 
     <h1>
-        فروشگاه سرور
+        💰 فروشگاه سرور
     </h1>
 
     <p>
@@ -430,6 +108,8 @@ footer{
     </p>
 
 </section>
+
+<!-- STORE -->
 
 <section class="store">
 
@@ -445,11 +125,13 @@ footer{
 
         <ul>
 
-            <li>کیت اختصاصی</li>
+            <li>✔ کیت اختصاصی</li>
 
-            <li>دستورات ویژه</li>
+            <li>✔ دستورات ویژه</li>
 
-            <li>تگ VIP</li>
+            <li>✔ تگ VIP</li>
+
+            <li>✔ رنگ اختصاصی در چت</li>
 
         </ul>
 
@@ -462,11 +144,11 @@ footer{
     <div class="rank best">
 
         <div class="badge">
-            محبوب
+            🔥 پرفروش‌ترین
         </div>
 
         <h2>
-            🔥 VIP+
+            💎 VIP+
         </h2>
 
         <div class="price">
@@ -475,11 +157,13 @@ footer{
 
         <ul>
 
-            <li>تمام امکانات VIP</li>
+            <li>✔ تمام امکانات VIP</li>
 
-            <li>فلای</li>
+            <li>✔ قابلیت Fly</li>
 
-            <li>کیت حرفه‌ای</li>
+            <li>✔ کیت حرفه‌ای</li>
+
+            <li>✔ اولویت ورود</li>
 
         </ul>
 
@@ -501,11 +185,13 @@ footer{
 
         <ul>
 
-            <li>تمام امکانات</li>
+            <li>✔ تمام امکانات VIP+</li>
 
-            <li>تگ اختصاصی</li>
+            <li>✔ تگ اختصاصی</li>
 
-            <li>قابلیت ویژه</li>
+            <li>✔ قابلیت‌های ویژه</li>
+
+            <li>✔ پشتیبانی اختصاصی</li>
 
         </ul>
 
@@ -517,11 +203,103 @@ footer{
 
 </section>
 
+<!-- INFO -->
+
+<section class="info">
+
+    <h2>
+
+        📋 راهنمای خرید
+
+    </h2>
+
+    <div class="info-box">
+
+        <p>
+
+            بعد از پرداخت، رنک شما حداکثر تا ۵ دقیقه روی سرور فعال خواهد شد.
+
+        </p>
+
+        <p>
+
+            در صورت وجود هرگونه مشکل از طریق صفحه ارتباط با ما با مدیریت در ارتباط باشید.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq">
+
+    <h2>
+
+        ❓ سوالات متداول
+
+    </h2>
+
+    <div class="faq-card">
+
+        <h3>
+
+            آیا رنک‌ها دائمی هستند؟
+
+        </h3>
+
+        <p>
+            خیر در صورت نیاز باید ماهانه تمدید شود
+
+        </p>
+
+    </div>
+
+    <div class="faq-card">
+
+        <h3>
+
+            رنک چه زمانی فعال می‌شود؟
+
+        </h3>
+
+        <p>
+
+            معمولاً کمتر از 30 دقیقه بعد از پرداخت.
+
+        </p>
+
+    </div>
+
+    <div class="faq-card">
+
+        <h3>
+
+            اگر مشکلی در خرید پیش آمد؟
+
+        </h3>
+
+        <p>
+
+            از طریق تلگرام یا صفحه ارتباط با ما پیام دهید.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
 
     © 2025 Donutt SMP
 
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>

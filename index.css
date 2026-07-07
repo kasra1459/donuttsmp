@@ -1,0 +1,494 @@
+/*======================================
+            HERO
+======================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:140px 20px 80px;
+
+}
+
+.hero-content{
+
+    width:100%;
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-size:80px;
+
+    color:#ff7b00;
+
+    margin:25px 0;
+
+    text-shadow:
+        0 0 20px
+        rgba(255,123,0,.35);
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    color:#bbb;
+
+    margin-bottom:40px;
+
+}
+/*======================================
+              STATS
+======================================*/
+
+.stats{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:30px;
+
+    padding:80px 0;
+
+}
+
+
+.stat{
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818,
+            #111
+        );
+
+    border:1px solid #222;
+
+    border-radius:22px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+.stat:hover{
+
+    transform:
+        translateY(-10px);
+
+    border-color:#ff7b00;
+
+    box-shadow:
+
+        0 20px 40px
+
+        rgba(255,123,0,.15);
+
+}
+
+
+.stat h2{
+
+    font-size:55px;
+
+    color:#ff7b00;
+
+    margin-bottom:15px;
+
+    text-shadow:
+
+        0 0 15px
+
+        rgba(255,123,0,.35);
+
+}
+
+
+.stat p{
+
+    color:#aaa;
+
+    font-size:18px;
+
+}
+
+
+/*======================================
+            GAMEMODES
+======================================*/
+
+
+.gamemodes{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+            4,
+            1fr
+        );
+
+    gap:25px;
+
+    padding-bottom:100px;
+
+}
+
+
+.gamemodes .card{
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #181818,
+            #111
+        );
+
+    border:1px solid #222;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+.gamemodes .card:hover{
+
+    transform:
+
+        translateY(-10px)
+        scale(1.03);
+
+
+    border-color:#ff7b00;
+
+
+    box-shadow:
+
+        0 20px 40px
+
+        rgba(255,123,0,.18);
+
+}
+
+
+.gamemodes h2{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+
+.gamemodes p{
+
+    color:#aaa;
+
+    line-height:30px;
+
+}
+/*======================================
+              RULES
+======================================*/
+
+.rules{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding-bottom:100px;
+
+}
+
+.rules h1{
+
+    text-align:center;
+
+    font-size:46px;
+
+    color:#ff7b00;
+
+    margin-bottom:45px;
+
+}
+
+.rule{
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818,
+            #111
+        );
+
+    border:1px solid #222;
+
+    border-radius:18px;
+
+    padding:22px 30px;
+
+    margin-bottom:18px;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.rule:hover{
+
+    transform:translateX(-8px);
+
+    border-color:#ff7b00;
+
+    box-shadow:
+
+        0 15px 30px
+
+        rgba(255,123,0,.15);
+
+}
+
+/*======================================
+        MOBILE INDEX
+======================================*/
+
+@media(max-width:768px){
+
+    .hero{
+
+        padding-top:130px;
+
+        min-height:auto;
+
+    }
+
+    .hero h1{
+
+        font-size:46px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .online{
+
+        font-size:14px;
+
+        margin-bottom:25px;
+
+    }
+
+    .ip-box{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .ip{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+        font-size:16px;
+
+    }
+
+    .copy{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .join{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gamemodes{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .rules{
+
+        width:95%;
+
+    }
+
+    .rules h1{
+
+        font-size:34px;
+
+    }
+
+    .rule{
+
+        font-size:16px;
+
+    }
+
+}
+/*======================================
+        HERO BUTTONS
+======================================*/
+
+.hero-online{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    background:#181818;
+
+    border:1px solid rgba(255,123,0,.2);
+
+    border-radius:40px;
+
+    color:#fff;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+
+}
+
+.copy,
+.join{
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9d00,
+            #ff5e00
+        );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    padding:16px 28px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.copy:hover,
+.join:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(255, 123, 0, 0.979);
+
+}
+
+.ip-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.ip{
+
+    background:#181818;
+
+    border:1px solid #222;
+
+    border-radius:15px;
+
+    padding:16px 25px;
+
+    font-size:18px;
+
+    color:#fff;
+
+}

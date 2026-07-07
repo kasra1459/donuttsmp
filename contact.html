@@ -3,462 +3,231 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>ارتباط با ما | Donutt SMP</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<style>
+    <title>ارتباط با ما | Donutt SMP</title>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./contact.css">
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#090909;
-    background-image:
-        radial-gradient(
-            rgba(255,123,0,.08),
-            transparent 40%
-        );
-
-    color:white;
-    font-family:tahoma;
-    overflow-x:hidden;
-}
-
-/* NAVBAR */
-
-.navbar{
-
-    width:90%;
-    max-width:1400px;
-
-    margin:20px auto;
-
-    padding:20px 30px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(25,25,25,.9),
-            rgba(10,10,10,.9)
-        );
-
-    border:1px solid
-        rgba(255,123,0,.15);
-
-    border-radius:20px;
-
-    box-shadow:
-        0 0 20px
-        rgba(255,123,0,.1);
-}
-
-.logo{
-
-    color:#ff7b00;
-
-    font-size:30px;
-
-    font-weight:900;
-
-    text-shadow:
-        0 0 15px
-        rgba(255,123,0,.4);
-}
-
-nav{
-
-    display:flex;
-
-    gap:15px;
-}
-
-nav a{
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:12px 18px;
-
-    border-radius:12px;
-
-    background:
-        rgba(255,255,255,.03);
-
-    border:
-        1px solid
-        rgba(255,123,0,.1);
-
-    transition:.3s;
-}
-
-nav a:hover{
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff9d00,
-            #ff5e00
-        );
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 10px 25px
-        rgba(255,123,0,.3);
-}
-
-/* HERO */
-
-.hero{
-
-    text-align:center;
-
-    padding:80px 20px;
-}
-
-.hero h1{
-
-    font-size:60px;
-
-    color:#ff7b00;
-
-    margin-bottom:20px;
-
-    text-shadow:
-        0 0 15px
-        rgba(255,123,0,.4);
-}
-
-.hero p{
-
-    color:#999;
-
-    font-size:20px;
-}
-
-/* CONTACTS */
-
-.contacts{
-
-    width:90%;
-    max-width:1400px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(280px,1fr)
-        );
-
-    gap:30px;
-
-    padding-bottom:100px;
-}
-
-/* CARD */
-
-.card{
-
-    background:
-        linear-gradient(
-            180deg,
-            #181818,
-            #111
-        );
-
-    border:1px solid #222;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    transition:.3s;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,.4);
-}
-
-.card:hover{
-
-    transform:
-        translateY(-10px)
-        scale(1.02);
-
-    border-color:#ff7b00;
-
-    box-shadow:
-        0 20px 40px
-        rgba(255,123,0,.2);
-}
-
-.icon{
-
-    width:100px;
-    height:100px;
-
-    margin:auto auto 25px;
-
-    border-radius:20px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:45px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff9d00,
-            #ff5e00
-        );
-
-    box-shadow:
-        0 0 25px
-        rgba(255,123,0,.3);
-}
-
-.card h2{
-
-    margin-bottom:15px;
-
-    font-size:28px;
-}
-
-.card p{
-
-    color:#aaa;
-
-    margin-bottom:25px;
-}
-
-/* BUTTON */
-
-button{
-
-    width:100%;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:15px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff9d00,
-            #ff5e00
-        );
-
-    color:white;
-
-    font-size:17px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-button:hover{
-
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        0 15px 30px
-        rgba(255,123,0,.4);
-}
-
-/* FOOTER */
-
-footer{
-
-    background:#111;
-
-    border-top:1px solid #222;
-
-    padding:40px;
-
-    text-align:center;
-
-    color:#777;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .navbar{
-
-        width:95%;
-
-        flex-direction:column;
-
-        gap:15px;
-
-        padding:20px;
-    }
-
-    nav{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    .hero h1{
-
-        font-size:40px;
-    }
-
-    .hero p{
-
-        font-size:16px;
-    }
-
-    .contacts{
-
-        width:95%;
-
-        grid-template-columns:1fr;
-    }
-
-    .card{
-
-        padding:25px;
-    }
-
-    .logo{
-
-        font-size:24px;
-    }
-}
-
-</style>
+<link rel="icon" type="image/png" href="./image/logo.png">
 
 </head>
 
 <body>
 
-<header class="navbar">
+<!-- Overlay -->
 
-    <div class="logo">
-        🍩 DONUTT SMP
+<div class="overlay"></div>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+
+        <div class="logo">
+
+            🍩 DONUTT SMP
+
+        </div>
+
+        <button class="close-menu">
+
+            ✕
+
+        </button>
+
     </div>
 
-    <nav>
+    <nav class="sidebar-nav">
 
-        <a href="index.html">🏠 خانه</a>
+        <a href="index.html">
+            🏠 خانه
+        </a>
 
-        <a href="store.html">💰 فروشگاه</a>
+        <a href="store.html">
+            💰 فروشگاه
+        </a>
 
-        <a href="staff.html">👑 تیم مدیریت</a>
+        <a href="staff.html">
+            👑 تیم مدیریت
+        </a>
+
+        <a href="contact.html" class="active">
+            💬 ارتباط با ما
+        </a>
 
     </nav>
 
+</aside>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        🍩 DONUTT SMP
+
+    </div>
+
+    <nav class="desktop-menu">
+
+        <a href="index.html">
+            🏠 خانه
+        </a>
+
+        <a href="store.html">
+            💰 فروشگاه
+        </a>
+
+        <a href="staff.html">
+            👑 تیم مدیریت
+        </a>
+
+        <a href="contact.html" class="active">
+            💬 ارتباط با ما
+        </a>
+
+    </nav>
+
+    <button class="menu-btn">
+
+        ☰
+
+    </button>
+
 </header>
+
+<!-- HERO -->
 
 <section class="hero">
 
     <h1>
+
         📞 ارتباط با ما
+
     </h1>
 
     <p>
+
         از طریق شبکه‌های اجتماعی با ما در ارتباط باشید
+
     </p>
 
 </section>
+
+<!-- CONTACT -->
 
 <section class="contacts">
 
     <div class="card">
 
-        <div class="icon">
-            💬
-        </div>
-
+      <div class="icon">
+    <img src="./image/discord.svg" alt="Discord">
+</div>
         <h2>
+
             Discord
+
         </h2>
 
         <p>
-            discord.gg/yourserver
+
+            discord.gg/donuttsmp
+
         </p>
 
-        <button>
+        <button class="buy">
+
             ورود
+
         </button>
 
     </div>
 
     <div class="card">
 
-        <div class="icon">
-            ✈️
-        </div>
+    <div class="icon">
+    <img src="./image/telegram.svg" alt="Discord">
+</div>
 
         <h2>
+
             Telegram
+
         </h2>
 
         <p>
+
             @DonuttSMP
+
         </p>
 
-        <button>
+        <button class="buy">
+
             ورود
+
         </button>
 
     </div>
 
     <div class="card">
 
-        <div class="icon">
-            📷
-        </div>
-
+   <div class="icon">
+    <img src="./image/instagram.svg" alt="Discord">
+</div>
         <h2>
+
             Instagram
+
         </h2>
 
         <p>
+
             @DonuttSMP
+
         </p>
 
-        <button>
+        <button class="buy">
+
             ورود
+
         </button>
 
     </div>
+ <div class="card">
 
+    <div class="icon">
+    <img src="./image/minimal-black@3x.png" alt="Discord">
+</div>
+
+        <h2>
+
+            Rubika
+
+        </h2>
+
+        <p>
+
+            @DonuttSMP_support
+
+        </p>
+
+        <button class="buy">
+
+            ورود
+
+        </button>
+
+    </div>
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -466,5 +235,8 @@ footer{
 
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
