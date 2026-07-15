@@ -1,232 +1,610 @@
 <!DOCTYPE html>
+
 <html lang="fa" dir="rtl">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <title>ارتباط با ما | Donutt SMP</title>
+<title>
 
-    <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="./contact.css">
+ارتباط با ما | Donutt SMP
 
-<link rel="icon" type="image/png" href="./image/logo.png">
+</title>
+
+<meta
+name="description"
+content="ارتباط با تیم Donutt SMP">
+
+<link
+rel="icon"
+href="./image/logo.png">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link
+rel="stylesheet"
+href="./style.css">
+
+<link
+rel="stylesheet"
+href="./contact.css">
 
 </head>
 
 <body>
 
-<!-- Overlay -->
-
 <div class="overlay"></div>
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+
+<img src="./image/logo.png" alt="Donutt SMP">
+
+<span>Donutt SMP</span>
+
+</a>
+
+<nav class="desktop-menu">
+
+<a href="index.html">
+
+خانه
+
+</a>
+
+<a href="store.html">
+
+فروشگاه
+
+</a>
+
+<a href="contact.html" class="active">
+
+ارتباط با ما
+
+</a>
+
+</nav>
+
+
+
+<button class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+</header>
 
 <!-- Sidebar -->
 
 <aside class="sidebar">
 
-    <div class="sidebar-header">
+<div class="sidebar-top">
 
-        <div class="logo">
+<h2>منو</h2>
 
-            🍩 DONUTT SMP
+<button class="close-menu">
 
-        </div>
+<i class="fa-solid fa-xmark"></i>
 
-        <button class="close-menu">
+</button>
 
-            ✕
+</div>
 
-        </button>
+<nav class="sidebar-menu">
 
-    </div>
+<a href="index.html">
 
-    <nav class="sidebar-nav">
+<i class="fa-solid fa-house"></i>
 
-        <a href="index.html">
-            🏠 خانه
-        </a>
+خانه
 
-        <a href="store.html">
-            💰 فروشگاه
-        </a>
+</a>
 
-    
-        
+<a href="store.html">
 
-    </nav>
+<i class="fa-solid fa-cart-shopping"></i>
+
+فروشگاه
+
+</a>
+
+<a href="contact.html" class="active">
+
+<i class="fa-solid fa-envelope"></i>
+
+ارتباط با ما
+
+</a>
+
+</nav>
 
 </aside>
 
-<!-- NAVBAR -->
+<!-- Hero -->
 
-<header class="navbar">
+<section class="contact-hero">
 
-    <div class="logo">
+<div class="container">
 
-        🍩 DONUTT SMP
+<div class="contact-hero-content fade-up">
+
+<span class="hero-badge">
+
+💬 Support
+
+</span>
+
+<h1>
+
+ارتباط با
+
+<span class="gradient-text">
+
+Donutt SMP
+
+</span>
+
+</h1>
+
+<p>
+
+در صورت داشتن هرگونه سوال، پیشنهاد یا مشکل، از طریق راه‌های زیر با ما در ارتباط باشید.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!--====================
+
+CONTACT
+
+=====================-->
+
+<section class="contact section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <!-- Contact Form -->
+
+            <div class="contact-form card fade-up">
+
+                <h2>
+
+                    ارسال پیام
+
+                </h2>
+
+                <p>
+
+                    پیام خود را برای تیم Donutt SMP ارسال کنید. در سریع‌ترین زمان ممکن پاسخ خواهیم داد.
+
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            نام
+
+                        </label>
+
+                        <input
+
+                        type="text"
+
+                        placeholder="نام شما">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            ایمیل
+
+                        </label>
+
+                        <input
+
+                        type="email"
+
+                        placeholder="example@gmail.com">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            موضوع
+
+                        </label>
+
+                        <input
+
+                        type="text"
+
+                        placeholder="موضوع پیام">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+
+                            پیام
+
+                        </label>
+
+                        <textarea
+
+                        rows="6"
+
+                        placeholder="پیام خود را بنویسید..."></textarea>
+
+                    </div>
+
+                    <button class="btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        ارسال پیام
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Contact Info -->
+
+            <div class="contact-info fade-up">
+
+                <div class="contact-card card">
+
+                    <div class="icon-box">
+
+                        <i class="fa-brands fa-discord"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Discord
+
+                    </h3>
+
+                    <p>
+
+                        سریع‌ترین راه ارتباط با تیم پشتیبانی
+
+                    </p>
+
+                    <a href="#">
+
+                        Join Discord
+
+                    </a>
+
+                </div>
+
+                <div class="contact-card card">
+
+                    <div class="icon-box">
+
+                        <i class="fa-brands fa-telegram"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Telegram
+
+                    </h3>
+
+                    <p>
+
+                        اخبار و اطلاعیه‌های سرور
+
+                    </p>
+
+                    <a href="#">
+
+                        @DonuttSMP
+
+                    </a>
+
+                </div>
+
+                <div class="contact-card card">
+
+                    <div class="icon-box">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Instagram
+
+                    </h3>
+
+                    <p>
+
+                        تصاویر و ویدیوهای سرور
+
+                    </p>
+
+                    <a href="#">
+
+                        @DonuttSMP
+
+                    </a>
+
+                </div>
+
+                <div class="contact-card card">
+
+                    <div class="icon-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+                    <h3>
+
+                        Email
+
+                    </h3>
+
+                    <p>
+
+                        ارتباط رسمی با مدیریت
+
+                    </p>
+
+                    <a href="mailto:support@donuttsmp.ir">
+
+                        support@donuttsmp.ir
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <nav class="desktop-menu">
+</section>
+<!--====================
 
-        <a href="index.html">
-            🏠 خانه
-        </a>
+SERVER INFO
 
-        <a href="store.html">
-            💰 فروشگاه
-        </a>
+=====================-->
 
-      
+<section class="section">
 
-       
+    <div class="container">
 
-    </nav>
+        <div class="server-info glass fade-up">
 
-    <button class="menu-btn">
+            <div class="server-item">
 
-        ☰
+                <i class="fa-solid fa-server"></i>
 
-    </button>
+                <h3>
 
-</header>
+                    آدرس سرور
 
-<!-- HERO -->
+                </h3>
 
-<section class="hero">
+                <span>
 
-    <h1>
+                    play.donuttsmp.ir
 
-        📞 ارتباط با ما
+                </span>
 
-    </h1>
+            </div>
 
-    <p>
+            <div class="server-item">
 
-        از طریق شبکه‌های اجتماعی با ما در ارتباط باشید
+                <i class="fa-solid fa-code-branch"></i>
 
-    </p>
+                <h3>
+
+                    نسخه
+
+                </h3>
+
+                <span>
+
+                    1.21.x
+
+                </span>
+
+            </div>
+
+            <div class="server-item">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h3>
+
+                    وضعیت
+
+                </h3>
+
+                <span class="online">
+
+                    🛑 Offline
+
+                </span>
+
+            </div>
+
+            <div class="server-item">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>
+
+                    پشتیبانی
+
+                </h3>
+
+                <span>
+
+                    24/7
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- CONTACT -->
 
-<section class="contacts">
+<!-- Back To Top -->
 
-    <div class="card">
+<button class="back-to-top">
 
-      <div class="icon">
-    <img src="./image/discord.svg" alt="Discord">
-</div>
-        <h2>
+    <i class="fa-solid fa-chevron-up"></i>
 
-            Discord
+</button>
 
-        </h2>
+<!--====================
 
-        <p>
+FOOTER
 
-            discord.gg/donuttsmp
+=====================-->
 
-        </p>
+<footer class="footer">
 
-        <button class="buy">
+    <div class="container">
 
-            ورود
+        <div class="footer-grid">
 
-        </button>
+            <div class="footer-box">
+
+                <img src="assets/image/logo.png"
+
+                class="footer-logo"
+
+                alt="Donutt SMP">
+
+                <h3>
+
+                    Donutt SMP
+
+                </h3>
+
+                <p>
+
+                    بهترین سرور ماینکرفت فارسی با اقتصاد اختصاصی، رنک‌های ویژه و ایونت‌های هیجان‌انگیز.
+
+                </p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>
+
+                    دسترسی سریع
+
+                </h3>
+
+                <ul>
+
+                    <li><a href="index.html">خانه</a></li>
+
+                    <li><a href="store.html">فروشگاه</a></li>
+
+                    <li><a href="contact.html">ارتباط با ما</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>
+
+                    اطلاعات سرور
+
+                </h3>
+
+                <ul>
+
+                    <li>IP : play.donuttsmp.ir</li>
+
+                    <li>Version : 1.8.9x </li>
+
+                    <li>Status : 🛑 Offline</li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>
+
+                    شبکه‌های اجتماعی
+
+                </h3>
+
+                <div class="socials">
+
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Donutt SMP • All Rights Reserved
+
+        </div>
 
     </div>
-
-    <div class="card">
-
-    <div class="icon">
-    <img src="./image/telegram.svg" alt="Discord">
-</div>
-
-        <h2>
-
-            Telegram
-
-        </h2>
-
-        <p>
-
-            @DonuttSMP
-
-        </p>
-
-        <button class="buy">
-
-            ورود
-
-        </button>
-
-    </div>
-
-    <div class="card">
-
-   <div class="icon">
-    <img src="./image/instagram.svg" alt="Discord">
-</div>
-        <h2>
-
-            Instagram
-
-        </h2>
-
-        <p>
-
-            @DonuttSMP
-
-        </p>
-
-        <button class="buy">
-
-            ورود
-
-        </button>
-
-    </div>
- <div class="card">
-
-    <div class="icon">
-    <img src="./image/minimal-black@3x.png" alt="Discord">
-</div>
-
-        <h2>
-
-            Rubika
-
-        </h2>
-
-        <p>
-
-            @DonuttSMP_support
-
-        </p>
-
-        <button class="buy">
-
-            ورود
-
-        </button>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-    © 2025 Donutt SMP
 
 </footer>
 
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
 </body>
 
